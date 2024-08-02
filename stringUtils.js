@@ -22,7 +22,7 @@ function toKebabCase(str) {
   // ^\w: the first word character in the string.
   // [A-Z]: any uppercase letter.
   // \s\w: a space followed by a word character.
-  return str
+  const computedStr = str
     .trim()
     .toLowerCase()
     .replace(/(?:^\w|[A-Z]|\s\w)/g, (character, index) => {
@@ -35,6 +35,7 @@ function toKebabCase(str) {
       return `-${lowerCaseCharacter}`
     })
     .replace(/\s+/g, "")
+  return computedStr
 }
 
 console.log(toCamelCase(originalString))
