@@ -16,9 +16,7 @@ function toCamelCase(str) {
     .replace(/[^a-zA-Z0-9]+/g, "")
 }
 
-
 function toKebabCase(str) {
-  let timesStartedCallbackForKebabCase = 0
   // The regex pattern /(?:^\w|[A-Z]|\s\w)/g matches:
   // ^\w: the first word character in the string.
   // [A-Z]: any uppercase letter.
@@ -27,8 +25,6 @@ function toKebabCase(str) {
     .trim()
     .toLowerCase()
     .replace(/(?:^\w|[A-Z]|\s\w)/g, (character, index) => {
-      ++timesStartedCallbackForKebabCase
-
       const lowerCaseCharacter = character.toLowerCase().trim()
       if (index === 0) {
         return lowerCaseCharacter
