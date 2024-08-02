@@ -16,8 +16,9 @@ function toCamelCase(str) {
     .replace(/[^a-zA-Z0-9]+/g, "")
 }
 
-let timesStartedCallbackForKebabCase = 0
+
 function toKebabCase(str) {
+  this.timesStartedCallbackForKebabCase = 0
   // The regex pattern /(?:^\w|[A-Z]|\s\w)/g matches:
   // ^\w: the first word character in the string.
   // [A-Z]: any uppercase letter.
