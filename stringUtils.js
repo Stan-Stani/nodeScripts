@@ -38,3 +38,4 @@ function toKebabCase(str) {
 console.log(toCamelCase(originalString))
 
 console.log(toKebabCase(originalString))
+  ``
