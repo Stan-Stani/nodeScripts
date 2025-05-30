@@ -2,3 +2,7 @@
 !**/.env.example
 **/*.log
 private/*
+
+**/node_modules
+
+**/.yarn
